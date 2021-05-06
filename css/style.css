@@ -1,0 +1,396 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1910px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .navbar {
+    padding: 2%;
+    margin: 0%;
+  }
+}
+@media screen and (max-width: 1910px) {
+  .navbar {
+    padding: 1rem;
+  }
+}
+.navbar .nav-link {
+  font-weight: 500;
+  color: #141313 !important;
+}
+@media screen and (max-width: 992px) {
+  .navbar .nav-link {
+    padding-top: 2rem;
+    text-align: center;
+  }
+}
+.navbar .nav-link.active, .navbar .nav-link:hover, .navbar .nav-link:focus {
+  background-image: linear-gradient(90deg, #4458dc 0%, #854fee 100%) !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.banner-section {
+  background: url(./img/banner/home-banner.png) no-repeat 35% 80%;
+}
+.banner-section .site-title h3.site-title__title-text {
+  font-weight: 700;
+}
+.banner-section .site-title h3.site-title__title-text::after {
+  content: "";
+  display: inline-block;
+  width: 18vw;
+  height: 2px;
+  background: #000;
+  transform: translateY(-5px);
+}
+.banner-section .site-title h1.site-title__title-text {
+  font-size: 5rem;
+}
+@media screen and (max-width: 340px) {
+  .banner-section .site-title h1.site-title__title-text {
+    font-size: 2.5rem;
+  }
+}
+
+.about-section {
+  padding: 5rem;
+}
+@media screen and (max-width: 768px) {
+  .about-section {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+@media screen and (max-width: 1910px) {
+  .about-section {
+    padding: 3% 4%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about-section .row {
+    flex-direction: column-reverse;
+  }
+}
+.about-section .about-title .title-a__item {
+  display: block;
+  font-weight: 700;
+  letter-spacing: 0.75rem;
+}
+.about-section .about-title .paragraphs p {
+  padding: 0.4rem;
+}
+@media screen and (max-width: 792px) {
+  .about-section .about-title .paragraphs p {
+    padding: 0%;
+  }
+}
+@media screen and (max-width: 792px) {
+  .about-section .about-title h2 > span {
+    font-size: 2rem;
+    letter-spacing: 0.75rem;
+  }
+}
+
+.brand-section {
+  padding: 1rem 20rem;
+  margin-bottom: 4rem;
+}
+@media screen and (max-width: 1910px) {
+  .brand-section {
+    padding: 3% 4%;
+  }
+}
+.brand-section .row-first .col-md-4 {
+  display: flex;
+  justify-content: center;
+}
+.brand-section .row-first .col-md-4 > .single-brand {
+  border: 1px solid #201f1f17;
+  text-align: center;
+  padding: 1.8rem 0;
+  margin: 0.9rem 0;
+  width: 180px;
+  height: 100px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+.brand-section .row-first .col-md-4 > .single-brand:hover {
+  box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+  transform: scale(1.1);
+}
+.brand-section .row-first .col-md-4 > .single-brand:hover > img {
+  filter: brightness(0.15);
+}
+.brand-section .row-first .col-md-4 > .single-brand > img {
+  width: 50;
+}
+.brand-section .experience-area {
+  padding-left: 1rem;
+  position: relative;
+}
+.brand-section .experience-area span {
+  display: block;
+}
+.brand-section .experience-area .years-area {
+  background: url("/img/brand/client-info-bg.png") no-repeat 45px 20px;
+  padding: 2rem 0 2rem 8rem;
+  width: 40rem;
+  height: 18rem;
+}
+@media screen and (max-width: 792px) {
+  .brand-section .experience-area .years-area {
+    padding-left: 1%;
+    width: 49%;
+  }
+}
+.brand-section .experience-area .years-area .years {
+  font-size: 5rem;
+  color: #4458dc;
+  font-weight: 700;
+  line-height: 2.5rem;
+  z-index: 1;
+}
+.brand-section .experience-area .years-area h2 > span {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+.brand-section .experience-area .bg-panel {
+  position: absolute;
+  left: -190px;
+  top: 0%;
+  background: #e029290a;
+  width: 400px;
+  height: 400px;
+  margin-left: 340px;
+  z-index: -1;
+}
+@media screen and (max-width: 792px) {
+  .brand-section .experience-area .bg-panel {
+    margin-left: 30%;
+    width: 80%;
+  }
+}
+.brand-section .experience-area .call-area {
+  padding-left: 10rem;
+}
+@media screen and (max-width: 792px) {
+  .brand-section .experience-area .call-area {
+    padding-left: 3%;
+  }
+}
+
+.services-section {
+  padding: 7rem 2rem;
+}
+@media screen and (max-width: 340px) {
+  .services-section {
+    padding: 2%;
+    margin: 0%;
+  }
+}
+@media screen and (max-width: 1910px) {
+  .services-section {
+    padding: 3% 4%;
+  }
+}
+.services-section__title {
+  padding: 0 14rem;
+}
+.services-section__title h1 {
+  font-size: 2rem;
+}
+.services-section .services {
+  background: rgba(248, 252, 253, 0.973);
+  padding: 2rem 0;
+  width: 16rem;
+  margin: 5rem 0.5rem;
+  transition: box-shadow 0.7s ease;
+}
+@media screen and (max-width: 340px) {
+  .services-section .services {
+    width: 13rem;
+  }
+}
+.services-section .services:hover {
+  box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+}
+
+.portfolio-section {
+  padding: 4rem 0;
+}
+.portfolio-section__button-group {
+  margin-bottom: 1rem;
+}
+.portfolio-section__button-group button {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.portfolio-section__button-group button + button {
+  margin-left: 2rem;
+}
+.portfolio-section__row-grid .our-projects > .title h4 {
+  font-size: 1.5rem;
+}
+.portfolio-section__row-grid .our-projects .img a:hover img {
+  filter: brightness(1.1) drop-shadow(1px 8px 30px #b1afaf);
+}
+
+.testimonials-section .testimonials-title p {
+  padding: 1rem 7rem;
+}
+.testimonials-section .client {
+  background: #ffffff10;
+  box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+  margin: 3rem 0;
+}
+.testimonials-section .client-img {
+  padding: 2rem;
+}
+@media screen and (min-width: 992px) {
+  .testimonials-section .client-img {
+    padding-right: 1.25rem;
+  }
+}
+.testimonials-section .client .about-client {
+  padding-top: 2rem;
+}
+.testimonials-section .client .about-client h4 {
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+.testimonials-section .client .about-client p {
+  font-size: 0.9rem;
+}
+.testimonials-section .owl-carousel .owl-item {
+  display: flex;
+  justify-content: center;
+  padding: 0 1.5rem;
+}
+.testimonials-section .owl-carousel .owl-dots .owl-dot.active span {
+  background: #4458dc;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.subscribe-section .subscribe {
+  background: linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+  padding: 10rem 0;
+  margin: 3rem auto;
+}
+@media screen and (max-width: 340px) {
+  .subscribe-section .subscribe {
+    padding: 2%;
+    margin: 0%;
+  }
+}
+@media screen and (max-width: 340px) {
+  .subscribe-section .subscribe .subscribe-title {
+    padding: 2%;
+    margin: 0%;
+  }
+}
+.subscribe-section .subscribe .subscribe-title h4 {
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: whitesmoke;
+}
+@media screen and (max-width: 340px) {
+  .subscribe-section .subscribe .subscribe-title h4 {
+    padding: 2%;
+    margin: 0%;
+  }
+}
+.subscribe-section .subscribe .subscribe-title p {
+  color: whitesmoke;
+  padding: 1rem 4rem;
+}
+@media screen and (max-width: 340px) {
+  .subscribe-section .subscribe .subscribe-title p {
+    padding: 2%;
+    margin: 0%;
+  }
+}
+.subscribe-section .subscribe form .input-textbox input {
+  width: 25rem;
+  padding: 1rem;
+  border: 1px solid whitesmoke;
+  background: transparent;
+  color: black;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+@media screen and (max-width: 340px) {
+  .subscribe-section .subscribe form .input-textbox input {
+    width: 15rem !important;
+  }
+}
+@media screen and (max-width: 792px) {
+  .subscribe-section .subscribe form .input-textbox input {
+    width: 20rem;
+    margin: 5%;
+  }
+}
+.subscribe-section .subscribe form .input-textbox input::placeholder {
+  color: whitesmoke;
+}
+.subscribe-section .subscribe form .btn-submit button {
+  background: white;
+  color: black;
+  padding: 0.7rem 2rem;
+}
+.subscribe-section .subscribe form .btn-submit button:hover {
+  background: whitesmoke;
+}
+
+.footer-section {
+  padding: 5rem 0;
+  background: url("/img/footer/footer-bg.png") no-repeat;
+}
+.footer-section .social h5 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+.footer-section .social a > i {
+  font-size: 1.5rem;
+  padding: 2rem;
+  color: #201f1f17;
+}
+.footer-section .social a > i:hover {
+  color: #4458dc;
+}

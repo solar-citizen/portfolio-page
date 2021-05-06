@@ -1,0 +1,493 @@
+@import "fonts";
+@import "reset";
+@import "variables";
+@import "media-queries";
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  //overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  @include w-1910-max {
+    max-width: 90%;
+  }
+}
+
+// Navigation -start
+.navbar {
+  @include w-340-max {
+    padding: 2%;
+    margin: 0%;
+  }
+
+  @include w-1910-max {
+    padding: 1rem;
+  }
+
+  .nav-link {
+    font-weight: 500;
+    color: $title !important;
+
+    @include w-992-max {
+      padding-top: 2rem;
+      text-align: center;
+    }
+
+    &.active,
+    &:hover,
+    &:focus {
+      background-image: $gradient !important;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+// Navigation -end
+
+// Banner -start
+
+.banner-section {
+  background: url(./img/banner/home-banner.png) no-repeat 35% 80%;
+
+  .site-title {
+    h3.site-title__title-text {
+      font-weight: 700;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 18vw;
+        height: 2px;
+        background: #000;
+        transform: translateY(-5px);
+      }
+    }
+
+    h1.site-title__title-text {
+      font-size: 5rem;
+
+      @include w-340-max {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+// Banner -end
+// ----------------------
+// About -start
+
+.about-section {
+  padding: 5rem;
+
+  @include w-768 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @include w-1910-max {
+    padding: 3% 4%;
+  }
+
+  .row {
+    @include w-768 {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .about-title {
+    .title-a {
+      &__item {
+        display: block;
+        font-weight: 700;
+        letter-spacing: 0.75rem;
+      }
+    }
+
+    .paragraphs {
+      p {
+        padding: 0.4rem;
+
+        @include w-792-max {
+          padding: 0%;
+        }
+      }
+    }
+
+    h2 > span {
+      @include w-792-max {
+        font-size: 2rem;
+        letter-spacing: 0.75rem;
+      }
+    }
+  }
+}
+
+// About -end
+
+// Brand sectiom -start
+
+.brand-section {
+  padding: 1rem 20rem;
+  margin-bottom: 4rem;
+
+  @include w-1910-max {
+    padding: 3% 4%;
+  }
+
+  .row-first {
+    .col-md-4 {
+      display: flex;
+      justify-content: center;
+
+      & > .single-brand {
+        border: 1px solid $border;
+        text-align: center;
+        padding: 1.8rem 0;
+        margin: 0.9rem 0;
+        width: 180px;
+        height: 100px;
+        cursor: pointer;
+        transition: transform 0.4s ease;
+
+        &:hover {
+          box-shadow: $box-shadow;
+          transform: scale(1.1);
+
+          & > img {
+            filter: brightness(0.15);
+          }
+        }
+
+        & > img {
+          width: 50;
+        }
+      }
+    }
+  }
+
+  .experience-area {
+    padding-left: 1rem;
+    position: relative;
+
+    span {
+      display: block;
+    }
+
+    .years-area {
+      background: url("/img/brand/client-info-bg.png") no-repeat 45px 20px;
+      padding: 2rem 0 2rem 8rem;
+      width: 40rem;
+      height: 18rem;
+
+      @include w-792-max {
+        padding-left: 1%;
+        width: 49%;
+      }
+
+      .years {
+        font-size: 5rem;
+        color: $primary;
+        font-weight: 700;
+        line-height: 2.5rem;
+        z-index: 1;
+      }
+
+      h2 > span {
+        font-weight: 700;
+        font-size: 1.25rem;
+        line-height: 2rem;
+      }
+    }
+
+    .bg-panel {
+      position: absolute;
+      left: -190px;
+      top: 0%;
+      background: #e029290a;
+      width: 400px;
+      height: 400px;
+      margin-left: 340px;
+      z-index: -1;
+
+      @include w-792-max {
+        margin-left: 30%;
+        width: 80%;
+      }
+    }
+
+    .call-area {
+      padding-left: 10rem;
+
+      @include w-792-max {
+        padding-left: 3%;
+      }
+    }
+  }
+}
+
+// Brand section  -end
+
+// Services section -start
+
+.services-section {
+  padding: 7rem 2rem;
+
+  @include w-340-max {
+    padding: 2%;
+    margin: 0%;
+  }
+
+  @include w-1910-max {
+    padding: 3% 4%;
+  }
+
+  &__title {
+    padding: 0 14rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  .services {
+    background: rgba(248, 252, 253, 0.973);
+    padding: 2rem 0;
+    width: 16rem;
+    margin: 5rem 0.5rem;
+    transition: box-shadow 0.7s ease;
+
+    @include w-340-max {
+      width: 13rem;
+    }
+
+    &:hover {
+      box-shadow: $box-shadow;
+    }
+  }
+}
+
+// Services section -end
+
+// Portfolio section -start
+
+.portfolio-section {
+  padding: 4rem 0;
+
+  &__button-group {
+    margin-bottom: 1rem;
+
+    button {
+      background: transparent;
+      border: none;
+      font-size: 1rem;
+      font-weight: 500;
+      text-transform: uppercase;
+
+      & + button {
+        margin-left: 2rem;
+      }
+    }
+  }
+
+  &__row-grid {
+    .our-projects {
+      & > .title h4 {
+        font-size: 1.5rem;
+      }
+
+      .img {
+        a {
+          &:hover img {
+            filter: brightness(1.1) drop-shadow(1px 8px 30px #b1afaf);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Portfolio section -end
+
+// Testimonials section -start
+
+.testimonials-section {
+  .testimonials-title {
+    p {
+      padding: 1rem 7rem;
+    }
+  }
+
+  .client {
+    background: #ffffff10;
+    box-shadow: $box-shadow;
+    margin: 3rem 0;
+
+    &-img {
+      padding: 2rem;
+
+      @include w-992-min {
+        padding-right: 1.25rem;
+      }
+    }
+
+    .about-client {
+      padding-top: 2rem;
+
+      h4 {
+        font-size: 1.25rem;
+        line-height: 1.25rem;
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .owl-carousel {
+    .owl-item {
+      display: flex;
+      justify-content: center;
+      padding: 0 1.5rem;
+    }
+
+    .owl-dots {
+      .owl-dot {
+        &.active {
+          span {
+            background: $primary;
+            width: 0.75rem;
+            height: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Testimonials section -end
+
+// Subscribe section -start
+
+.subscribe-section {
+  .subscribe {
+    background: $gradient;
+    padding: 10rem 0;
+    margin: 3rem auto;
+
+    @include w-340-max {
+      padding: 2%;
+      margin: 0%;
+    }
+
+    .subscribe-title {
+      @include w-340-max {
+        padding: 2%;
+        margin: 0%;
+      }
+
+      h4 {
+        font-size: 2rem;
+        line-height: 2rem;
+        font-weight: 700;
+        color: whitesmoke;
+
+        @include w-340-max {
+          padding: 2%;
+          margin: 0%;
+        }
+      }
+
+      p {
+        color: whitesmoke;
+        padding: 1rem 4rem;
+
+        @include w-340-max {
+          padding: 2%;
+          margin: 0%;
+        }
+      }
+    }
+
+    form {
+      .input-textbox {
+        input {
+          width: 25rem;
+          padding: 1rem;
+          border: 1px solid whitesmoke;
+          background: transparent;
+          color: black;
+          font-size: 1rem;
+          line-height: 1.25rem;
+          font-weight: 500;
+
+          @include w-340-max {
+            width: 15rem !important;
+          }
+
+          @include w-792-max {
+            width: 20rem;
+            margin: 5%;
+          }
+
+          &::placeholder {
+            color: whitesmoke;
+          }
+        }
+      }
+
+      .btn-submit {
+        button {
+          background: white;
+          color: black;
+          padding: 0.7rem 2rem;
+
+          &:hover {
+            background: whitesmoke;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Testimonials section -end
+
+// Footer section -start
+
+.footer-section {
+  padding: 5rem 0;
+  background: url("/img/footer/footer-bg.png") no-repeat;
+
+  .social {
+    h5 {
+      font-weight: 500;
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+    }
+
+    a {
+      & > i {
+        font-size: 1.5rem;
+        padding: 2rem;
+        color: $border;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+// Footer section -end
