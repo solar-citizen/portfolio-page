@@ -66,6 +66,14 @@ a {
     background-image: none;
   }
 }
+.banner-section .site-title {
+  align-items: flex-start;
+}
+@media screen and (max-width: 992px) {
+  .banner-section .site-title {
+    align-items: center;
+  }
+}
 .banner-section .site-title h3.site-title__title-text {
   font-weight: 700;
 }
@@ -257,8 +265,13 @@ a {
   background: rgba(248, 252, 253, 0.973);
   padding: 2rem 0;
   width: 16rem;
-  margin: 5rem auto;
+  margin: 3rem auto;
   transition: box-shadow 0.7s ease;
+}
+@media screen and (max-width: 768px) {
+  .services-section .services {
+    margin: 2rem auto;
+  }
 }
 @media screen and (max-width: 340px) {
   .services-section .services {
@@ -300,6 +313,7 @@ a {
   font-size: 1.5rem;
 }
 .portfolio-section__row-grid .our-projects .img {
+  max-width: 100%;
   border-radius: 1%;
 }
 .portfolio-section__row-grid .our-projects .img a:hover img {
@@ -308,6 +322,11 @@ a {
 
 .testimonials-section .testimonials-title p {
   padding: 1rem 7rem;
+}
+@media screen and (max-width: 992px) {
+  .testimonials-section .testimonials-title p {
+    padding: 0;
+  }
 }
 .testimonials-section .client {
   background: #ffffff10;
@@ -383,6 +402,12 @@ a {
     margin: 0%;
   }
 }
+@media screen and (max-width: 1240px) {
+  .subscribe-section .subscribe form .input-textbox {
+    display: flex;
+    justify-content: center;
+  }
+}
 .subscribe-section .subscribe form .input-textbox input {
   width: 25rem;
   padding: 1rem;
@@ -406,6 +431,15 @@ a {
 }
 .subscribe-section .subscribe form .input-textbox input::placeholder {
   color: whitesmoke;
+}
+.subscribe-section .subscribe form .btn-submit {
+  justify-content: flex-start;
+}
+@media screen and (max-width: 1240px) {
+  .subscribe-section .subscribe form .btn-submit {
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
 }
 .subscribe-section .subscribe form .btn-submit button {
   background: white;

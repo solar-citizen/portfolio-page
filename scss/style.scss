@@ -63,6 +63,11 @@ a {
   }
 
   .site-title {
+    align-items: flex-start;
+    @include w-992-max {
+      align-items: center;
+    }
+
     h3.site-title__title-text {
       font-weight: 700;
 
@@ -282,8 +287,12 @@ a {
     background: rgba(248, 252, 253, 0.973);
     padding: 2rem 0;
     width: 16rem;
-    margin: 5rem auto;
+    margin: 3rem auto;
     transition: box-shadow 0.7s ease;
+
+    @include w-768 {
+      margin: 2rem auto;
+    }
 
     @include w-340-max {
       width: 13rem;
@@ -333,6 +342,7 @@ a {
       }
 
       .img {
+        max-width: 100%;
         border-radius: 1%;
 
         a {
@@ -353,6 +363,10 @@ a {
   .testimonials-title {
     p {
       padding: 1rem 7rem;
+
+      @include w-992-max {
+        padding: 0;
+      }
     }
   }
 
@@ -451,6 +465,11 @@ a {
 
     form {
       .input-textbox {
+        @include w-1240-max {
+          display: flex;
+          justify-content: center;
+        }
+
         input {
           width: 25rem;
           padding: 1rem;
@@ -477,6 +496,13 @@ a {
       }
 
       .btn-submit {
+        justify-content: flex-start;
+
+        @include w-1240-max {
+          justify-content: center;
+          margin-top: 1.5rem;
+        }
+
         button {
           background: white;
           color: black;
