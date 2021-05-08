@@ -44,6 +44,7 @@ a {
     &:hover,
     &:focus {
       background-image: $gradient !important;
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -55,7 +56,11 @@ a {
 // Banner -start
 
 .banner-section {
-  background: url(./img/banner/home-banner.png) no-repeat 35% 80%;
+  background: url(/img/banner/home-banner.png) no-repeat 35% 85%;
+
+  @include w-1300-max {
+    background-image: none;
+  }
 
   .site-title {
     h3.site-title__title-text {
@@ -98,12 +103,16 @@ a {
   }
 
   .row {
-    @include w-768 {
+    @include w-992-max {
       flex-direction: column-reverse;
     }
   }
 
   .about-title {
+    @include w-992-max {
+      text-align: center;
+    }
+
     .title-a {
       &__item {
         display: block;
@@ -113,6 +122,12 @@ a {
     }
 
     .paragraphs {
+      width: 75%;
+
+      @include w-992-max {
+        width: 100%;
+      }
+
       p {
         padding: 0.4rem;
 
@@ -183,7 +198,7 @@ a {
     }
 
     .years-area {
-      background: url("/img/brand/client-info-bg.png") no-repeat 45px 20px;
+      background: url(/img/brand/client-info-bg.png) no-repeat 45px 20px;
       padding: 2rem 0 2rem 8rem;
       width: 40rem;
       height: 18rem;
@@ -251,7 +266,12 @@ a {
   }
 
   &__title {
-    padding: 0 14rem;
+    /*padding: 0 14rem;*/
+    max-width: 75%;
+
+    @include w-992-max {
+      max-width: 100%;
+    }
 
     h1 {
       font-size: 2rem;
@@ -262,7 +282,7 @@ a {
     background: rgba(248, 252, 253, 0.973);
     padding: 2rem 0;
     width: 16rem;
-    margin: 5rem 0.5rem;
+    margin: 5rem auto;
     transition: box-shadow 0.7s ease;
 
     @include w-340-max {
@@ -281,6 +301,9 @@ a {
 
 .portfolio-section {
   padding: 4rem 0;
+  @include w-768 {
+    text-align: center;
+  }
 
   &__button-group {
     margin-bottom: 1rem;
@@ -290,10 +313,15 @@ a {
       border: none;
       font-size: 1rem;
       font-weight: 500;
+      margin-top: 0.5rem;
       text-transform: uppercase;
 
       & + button {
         margin-left: 2rem;
+
+        @include w-551-max {
+          margin-left: 1rem;
+        }
       }
     }
   }
@@ -305,6 +333,8 @@ a {
       }
 
       .img {
+        border-radius: 1%;
+
         a {
           &:hover img {
             filter: brightness(1.1) drop-shadow(1px 8px 30px #b1afaf);
@@ -461,13 +491,13 @@ a {
   }
 }
 
-// Testimonials section -end
+// Subscribe section -end
 
 // Footer section -start
 
 .footer-section {
   padding: 5rem 0;
-  background: url("/img/footer/footer-bg.png") no-repeat;
+  background: url(/img/footer/footer-bg.png) no-repeat;
 
   .social {
     h5 {

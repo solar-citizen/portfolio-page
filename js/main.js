@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    const $btns = $('.portfolio-section portfolio-section__button-group button');
+    const $btns = $('.portfolio-section .portfolio-section__button-group button');
 
     $btns.click(function(e){
 

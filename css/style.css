@@ -53,12 +53,18 @@ a {
 }
 .navbar .nav-link.active, .navbar .nav-link:hover, .navbar .nav-link:focus {
   background-image: linear-gradient(90deg, #4458dc 0%, #854fee 100%) !important;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .banner-section {
-  background: url(./img/banner/home-banner.png) no-repeat 35% 80%;
+  background: url(/img/banner/home-banner.png) no-repeat 35% 85%;
+}
+@media screen and (max-width: 1300px) {
+  .banner-section {
+    background-image: none;
+  }
 }
 .banner-section .site-title h3.site-title__title-text {
   font-weight: 700;
@@ -94,15 +100,28 @@ a {
     padding: 3% 4%;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .about-section .row {
     flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 992px) {
+  .about-section .about-title {
+    text-align: center;
   }
 }
 .about-section .about-title .title-a__item {
   display: block;
   font-weight: 700;
   letter-spacing: 0.75rem;
+}
+.about-section .about-title .paragraphs {
+  width: 75%;
+}
+@media screen and (max-width: 992px) {
+  .about-section .about-title .paragraphs {
+    width: 100%;
+  }
 }
 .about-section .about-title .paragraphs p {
   padding: 0.4rem;
@@ -160,7 +179,7 @@ a {
   display: block;
 }
 .brand-section .experience-area .years-area {
-  background: url("/img/brand/client-info-bg.png") no-repeat 45px 20px;
+  background: url(/img/brand/client-info-bg.png) no-repeat 45px 20px;
   padding: 2rem 0 2rem 8rem;
   width: 40rem;
   height: 18rem;
@@ -223,7 +242,13 @@ a {
   }
 }
 .services-section__title {
-  padding: 0 14rem;
+  /*padding: 0 14rem;*/
+  max-width: 75%;
+}
+@media screen and (max-width: 992px) {
+  .services-section__title {
+    max-width: 100%;
+  }
 }
 .services-section__title h1 {
   font-size: 2rem;
@@ -232,7 +257,7 @@ a {
   background: rgba(248, 252, 253, 0.973);
   padding: 2rem 0;
   width: 16rem;
-  margin: 5rem 0.5rem;
+  margin: 5rem auto;
   transition: box-shadow 0.7s ease;
 }
 @media screen and (max-width: 340px) {
@@ -247,6 +272,11 @@ a {
 .portfolio-section {
   padding: 4rem 0;
 }
+@media screen and (max-width: 768px) {
+  .portfolio-section {
+    text-align: center;
+  }
+}
 .portfolio-section__button-group {
   margin-bottom: 1rem;
 }
@@ -255,13 +285,22 @@ a {
   border: none;
   font-size: 1rem;
   font-weight: 500;
+  margin-top: 0.5rem;
   text-transform: uppercase;
 }
 .portfolio-section__button-group button + button {
   margin-left: 2rem;
 }
+@media screen and (max-width: 551px) {
+  .portfolio-section__button-group button + button {
+    margin-left: 1rem;
+  }
+}
 .portfolio-section__row-grid .our-projects > .title h4 {
   font-size: 1.5rem;
+}
+.portfolio-section__row-grid .our-projects .img {
+  border-radius: 1%;
 }
 .portfolio-section__row-grid .our-projects .img a:hover img {
   filter: brightness(1.1) drop-shadow(1px 8px 30px #b1afaf);
@@ -379,7 +418,7 @@ a {
 
 .footer-section {
   padding: 5rem 0;
-  background: url("/img/footer/footer-bg.png") no-repeat;
+  background: url(/img/footer/footer-bg.png) no-repeat;
 }
 .footer-section .social h5 {
   font-weight: 500;
