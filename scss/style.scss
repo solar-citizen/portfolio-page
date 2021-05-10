@@ -56,7 +56,7 @@ a {
 // Banner -start
 
 .banner-section {
-  background: url("/img/banner/home-banner.png") no-repeat 35% 85%;
+  background: url(/img/banner/home-banner.png) no-repeat 35% 85%;
 
   @include w-1300-max {
     background-image: none;
@@ -203,7 +203,7 @@ a {
     }
 
     .years-area {
-      background: url("/img/brand/client-info-bg.png") no-repeat 45px 20px;
+      background: url(/img/brand/client-info-bg.png) no-repeat 45px 20px;
       padding: 2rem 0 2rem 8rem;
       width: 40rem;
       height: 18rem;
@@ -523,7 +523,7 @@ a {
 
 .footer-section {
   padding: 5rem 0;
-  background: url("/img/footer/footer-bg.png") no-repeat;
+  background: url(/img/footer/footer-bg.png) no-repeat;
 
   .social {
     h5 {
